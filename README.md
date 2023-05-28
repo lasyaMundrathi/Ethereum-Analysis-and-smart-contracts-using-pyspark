@@ -1,8 +1,8 @@
 # Analysis of Ethereum Transactions and Smart Contracts
 Analysed the full set of transactions which have occurred on the Ethereum network; from the first transactions in August 2015 till January 2019. Created several Spark programs to perform multiple types of computation. presented a clear programs alongside an explnation of how the results are obtained.
-## Dataset overview
+### Dataset overview
 Ethereum is a blockchain based distributed computing platform where users may exchange currency (Ether), provide or purchase services (smart contracts), mint their own coinage (tokens), as well as other applications. The Ethereum network is fully decentralised, managed by public-key cryptography, peer-to-peer networking, and proof-of-work to process/verify transactions.
-## Dataset Schema - blocks
+### Dataset Schema - blocks
 number: The block number
 
 hash: Hash of the block
@@ -40,7 +40,7 @@ timestamp: The timestamp for when the block was collated
 transaction_count: The number of transactions in the block
 
 base_fee_per_gas: Base fee value
-## Dataset Schema - transactions
+### Dataset Schema - transactions
 hash: Hash of the block
 
 nonce: Nonce that satisfies the difficulty target
@@ -69,7 +69,7 @@ max_fee_per_gas: Sum of base fee and max priority fee
 max_priority_fee_per_gas: Tip for mining the transaction
 
 transaction_type: Value used to indicate if the transaction is related to a contract or other specialised transaction
-## Dataset Schema - contracts
+### Dataset Schema - contracts
 address: Address of the contract
 
 bytecode: Code for Ethereum Contract
@@ -77,7 +77,7 @@ bytecode: Code for Ethereum Contract
 function_sighashes: Function signature hashes of a contract
 
 is_erc20: Whether this contract is an ERC20 contract
-## Dataset Schema - scams.json
+### Dataset Schema - scams.json
 id: Unique ID for the reported scam
 
 name: Name of the Scam
@@ -100,7 +100,7 @@ ip: IP address of the reporter
 
 status: If the scam is currently active, inactive or has been taken offline
 # Part A
-## PartA1:-“Monthly Transaction Volume: Bar Plot Analysis"
+### PartA1:-“Monthly Transaction Volume: Bar Plot Analysis"
 **AIM**:- Create a bar plot showing the number of transactions occurring every month between the start and end of the dataset.
 **Methodology** 
 1) Initially creating a spark RDD by reading the transactions data from the aws s3 bucket. 
@@ -108,8 +108,11 @@ status: If the scam is currently active, inactive or has been taken offline
 3) Year and month of a ‘block_timestamp’ variable from the clean_transactions RDD  is extracted using the ‘strftime’ function which converts the timestamp value into a desired year and month format and the ‘gmtime’ function converts the integer timestamp value to UTC. The second member of the tuple is a constant value of 1, representing the number of transactions for that month.
 4) Transaction_values RDD is created which contains the count of transactions occurring each month  using the reduceByKey transformation. Here the reduceByKey function groups the tuple ‘yyyy-mm’ key  and sums the number of transactions occurring each month.
 5) Finally plotted a bar plot from the output in the format (‘yyyy-mm’,transaction count value) using python and matplotlib library. 
+
 **Output**
+
 ![image](https://github.com/lasyaMundrathi/Ethereum-Analysis-and-smart-contracts-using-pyspark/assets/98383338/9ce5df3d-c295-42ac-8395-e2f3fa58980e)
+
 # Part A2:-"Average Monthly Transaction Value: Bar Plot Analysis"
 **Aim:-Create a bar plot showing the average value of transaction in each month between the start and end of the dataset.**
 **Methodology**
@@ -119,7 +122,9 @@ status: If the scam is currently active, inactive or has been taken offline
 4) The generated RDD is grouped by key (i.e., by year and month) using the groupByKey transformation.
 5) To compute the average of the values for each key, the mapValues transformation is used to the grouped RDD. The sum and len functions are used to compute the sum of the values for each key and the number of values. After then, the average is calculated by dividing the total by the number of values.
 6) Finally, the RDD is allocated to the variable monthly avg and reported to the console.
+
 **Output:**
+
 ![image](https://github.com/lasyaMundrathi/Ethereum-Analysis-and-smart-contracts-using-pyspark/assets/98383338/5e64a0aa-5210-4cf9-ad58-cc0f8af7e92c)
 The conclusion from the preceding graph is that the average transaction value was greatest during the early days of the dataset owing to the low number of transactions; nevertheless, as the crypto buzzword expanded over the world, the ethereum transaction counts rapidly climbed during the years, resulting in a dropping average transaction value.
 
