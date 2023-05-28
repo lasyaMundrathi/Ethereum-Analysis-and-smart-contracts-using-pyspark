@@ -99,5 +99,17 @@ reporter: User/company who reported the scam first
 ip: IP address of the reporter
 
 status: If the scam is currently active, inactive or has been taken offline
+# Part A
+# PartA1:-“Monthly Transaction Volume: Bar Plot Analysis"
+**AIM**:- Create a bar plot showing the number of transactions occurring every month between the start and end of the dataset.
+**Methodology** 
+1) Initially creating a spark RDD by reading the transactions data from the aws s3 bucket. 
+2) This RDD is checked for any malformed linears using the clean transactions function that filters invalid transactions from the dataset which do not have a length of 15. A new RDD is created ‘time_epoch’ which extracts the timestamp value at index 11.
+3) Year and month of a ‘block_timestamp’ variable from the clean_transactions RDD  is extracted using the ‘strftime’ function which converts the timestamp value into a desired year and month format and the ‘gmtime’ function converts the integer timestamp value to UTC. The second member of the tuple is a constant value of 1, representing the number of transactions for that month.
+4) Transaction_values RDD is created which contains the count of transactions occurring each month  using the reduceByKey transformation. Here the reduceByKey function groups the tuple ‘yyyy-mm’ key  and sums the number of transactions occurring each month.
+5) Finally plotted a bar plot from the output in the format (‘yyyy-mm’,transaction count value) using python and matplotlib library. 
+![image](https://github.com/lasyaMundrathi/Ethereum-Analysis-and-smart-contracts-using-pyspark/assets/98383338/9ce5df3d-c295-42ac-8395-e2f3fa58980e)
+# Part A2:-"Average Monthly Transaction Value: Bar Plot Analysis"
+## Aim:-Create a bar plot showing the average value of transaction in each month between the start and end of the dataset.
 
 
