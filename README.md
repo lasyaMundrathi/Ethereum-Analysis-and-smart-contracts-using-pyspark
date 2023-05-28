@@ -1,5 +1,5 @@
 # Analysis of Ethereum Transactions and Smart Contracts
-analyse the full set of transactions which have occurred on the Ethereum network; from the first transactions in August 2015 till January 2019. You will create several Spark programs to perform multiple types of computation. You will submit a report containing your results alongside an explanation of how they were obtained.
+Analysed the full set of transactions which have occurred on the Ethereum network; from the first transactions in August 2015 till January 2019. Created several Spark programs to perform multiple types of computation. presented a clear programs alongside an explnation of how the results are obtained.
 # Dataset overview
 Ethereum is a blockchain based distributed computing platform where users may exchange currency (Ether), provide or purchase services (smart contracts), mint their own coinage (tokens), as well as other applications. The Ethereum network is fully decentralised, managed by public-key cryptography, peer-to-peer networking, and proof-of-work to process/verify transactions.
 # Dataset Schema - blocks
@@ -50,7 +50,6 @@ block_hash: Hash of the block where the transaction is in
 block_number: Block number where this transaction was in
 
 transaction_index: Transactions index position in the block.
-
 from_address: Address of the sender
 
 to_address: Address of the receiver. null when it is a contract creation transaction
