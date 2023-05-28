@@ -148,7 +148,11 @@ Finally top10 values are extracted.
 **Output:**
 
 ![image](https://github.com/lasyaMundrathi/Ethereum-Analysis-and-smart-contracts-using-pyspark/assets/98383338/a82bac06-df5b-43b9-9993-926a14532d1d)
-
+| Rank | Address | Value |
+|----------|----------|----------|
+| Row 1    | Cell 1   | Cell 2   |
+| Row 2    | Cell 3   | Cell 4   |
+| Row 3    | Cell 5   | Cell 6   |
 
 
 
