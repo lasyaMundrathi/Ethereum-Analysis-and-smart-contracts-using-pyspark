@@ -102,6 +102,7 @@ status: If the scam is currently active, inactive or has been taken offline
 ## Part A
 #### PartA1:-“Monthly Transaction Volume: Bar Plot Analysis"
 **AIM**:- Create a bar plot showing the number of transactions occurring every month between the start and end of the dataset.
+
 **Methodology** 
 1) Initially creating a spark RDD by reading the transactions data from the aws s3 bucket. 
 2) This RDD is checked for any malformed linears using the clean transactions function that filters invalid transactions from the dataset which do not have a length of 15. A new RDD is created ‘time_epoch’ which extracts the timestamp value at index 11.
@@ -115,7 +116,9 @@ status: If the scam is currently active, inactive or has been taken offline
 
 #### Part A2:-"Average Monthly Transaction Value: Bar Plot Analysis"
 **Aim:-Create a bar plot showing the average value of transaction in each month between the start and end of the dataset.**
+
 **Methodology**
+
 1)The code in average transactions calculates the monthly average of transaction values occurring each month over time. 
 2) The clean transactions RDD is mapped using a lambda function to build a new RDD containing tuples of the type (block timestamp, value). The split technique is used to extract the date and value from each line of the input RDD.
 3) The resultant RDD is mapped again using a lambda function to produce a new RDD containing tuples of the type (YYYY-MM, value), where YYYY-MM is the year and month corresponding to the timestamp value retrieved in the previous step. The ‘strftime’ function is used to transform a timestamp into a string with the chosen date format.
