@@ -119,7 +119,7 @@ status: If the scam is currently active, inactive or has been taken offline
 
 **Methodology**
 
-1)The code in average transactions calculates the monthly average of transaction values occurring each month over time. 
+1) The code in average transactions calculates the monthly average of transaction values occurring each month over time. 
 2) The clean transactions RDD is mapped using a lambda function to build a new RDD containing tuples of the type (block timestamp, value). The split technique is used to extract the date and value from each line of the input RDD.
 3) The resultant RDD is mapped again using a lambda function to produce a new RDD containing tuples of the type (YYYY-MM, value), where YYYY-MM is the year and month corresponding to the timestamp value retrieved in the previous step. The ‘strftime’ function is used to transform a timestamp into a string with the chosen date format.
 4) The generated RDD is grouped by key (i.e., by year and month) using the groupByKey transformation.
