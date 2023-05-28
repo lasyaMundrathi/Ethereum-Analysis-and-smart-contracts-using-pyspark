@@ -99,8 +99,8 @@ reporter: User/company who reported the scam first
 ip: IP address of the reporter
 
 status: If the scam is currently active, inactive or has been taken offline
-# Part A
-### PartA1:-“Monthly Transaction Volume: Bar Plot Analysis"
+## Part A
+#### PartA1:-“Monthly Transaction Volume: Bar Plot Analysis"
 **AIM**:- Create a bar plot showing the number of transactions occurring every month between the start and end of the dataset.
 **Methodology** 
 1) Initially creating a spark RDD by reading the transactions data from the aws s3 bucket. 
@@ -113,7 +113,7 @@ status: If the scam is currently active, inactive or has been taken offline
 
 ![image](https://github.com/lasyaMundrathi/Ethereum-Analysis-and-smart-contracts-using-pyspark/assets/98383338/9ce5df3d-c295-42ac-8395-e2f3fa58980e)
 
-# Part A2:-"Average Monthly Transaction Value: Bar Plot Analysis"
+#### Part A2:-"Average Monthly Transaction Value: Bar Plot Analysis"
 **Aim:-Create a bar plot showing the average value of transaction in each month between the start and end of the dataset.**
 **Methodology**
 1)The code in average transactions calculates the monthly average of transaction values occurring each month over time. 
