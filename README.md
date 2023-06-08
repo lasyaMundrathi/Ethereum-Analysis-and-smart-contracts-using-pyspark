@@ -4,43 +4,27 @@ Analysed the full set of transactions which have occurred on the Ethereum networ
 Ethereum is a blockchain based distributed computing platform where users may exchange currency (Ether), provide or purchase services (smart contracts), mint their own coinage (tokens), as well as other applications. The Ethereum network is fully decentralised, managed by public-key cryptography, peer-to-peer networking, and proof-of-work to process/verify transactions.
 ### Dataset Schema - blocks
 number: The block number
-
 hash: Hash of the block
-
 parent_hash: Hash of the parent of the block
-
 nonce: Nonce that satisfies the difficulty target
-
 sha3_uncles: Combined has of all uncles for a given parent
-
 logs_bloom: Data structure containing event logs
-
 transactions_root: Root hash of the transactions in the payload
-
 state_root: Root hash of the state object
-
 receipts_root: hash of the transaction receipts tree
-
 miner: The address of the beneficiary to whom the mining rewards were given
-
 difficulty: Integer of the difficulty for this block
-
 total_difficulty: Total difficulty of the chain until this block
-
 size: The size of this block in bytes
-
 extra_data: Arbitrary additional data as raw bytes
-
 gas_limit: The maximum gas allowed in this block
-
 gas_used: The total used gas by all transactions in this block
-
 timestamp: The timestamp for when the block was collated
-
 transaction_count: The number of transactions in the block
-
 base_fee_per_gas: Base fee value
+
 ### Dataset Schema - transactions
+
 hash: Hash of the block
 
 nonce: Nonce that satisfies the difficulty target
@@ -146,11 +130,6 @@ The algorithm seeks to analyse the top ten most popular services by locating the
 Finally top10 values are extracted.
 
 **Output:**
-
-![image](https://github.com/lasyaMundrathi/Ethereum-Analysis-and-smart-contracts-using-pyspark/assets/98383338/0d7669d5-1547-41e3-a680-d766b1363533)
-
-
-
 <div style="width: 50px;">
   
 | Rank | Address | Value |
@@ -168,6 +147,7 @@ Finally top10 values are extracted.
 </div>
 
 **Part C Top Ten Most Active Miners**
+
 **Objective :** The algorithm seeks to analyse the top ten most popular services  by the size of the blocks mined.
 ## **Methodology**
 1) The block's RDD is created by utilising the textFile method of the Spark context object to read a CSV file from an S3 bucket.
@@ -179,7 +159,6 @@ Finally top10 values are extracted.
 7) The variable topminers, which contains a list of tuples containing the addresses and aggregate size of the top 10 miners, is written to the console.
 
 **Output:**
-![image](https://github.com/lasyaMundrathi/Ethereum-Analysis-and-smart-contracts-using-pyspark/assets/98383338/4b76af0e-bc78-4442-affe-939b4bf3f05b)
 
 <div style="width: 50px;">
   
