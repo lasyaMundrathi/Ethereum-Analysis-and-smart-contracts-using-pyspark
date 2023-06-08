@@ -146,7 +146,7 @@ The algorithm seeks to analyse the top ten most popular services by locating the
 Finally top10 values are extracted.
 
 **Output:**
-
+<div style="width: 100px;">
 | Rank | Address | Value |
 |----------|----------|----------|
 | 1    | "0xaa1a6e3e6ef20068f7f8d8c835d2d22fd5116444"  | 84155363699941767867374641  |
@@ -160,6 +160,6 @@ Finally top10 values are extracted.
 | 9   | 0xabbb6bebfa05aa13e908eaa492bd7a8343760477   | 10719485945628946136524680  |
 | 10    | 0x341e790174e3a4d35b65fdc067b6b5634a61caea   |8379000751917755624057500   |
 
-
+</div>
 
 
