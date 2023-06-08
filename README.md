@@ -147,7 +147,7 @@ Finally top10 values are extracted.
 
 **Output:**
 
-<div style="width: 100px;">
+<div style="width: 50px;">
   
 | Rank | Address | Value |
 |----------|----------|----------|
