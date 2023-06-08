@@ -146,6 +146,8 @@ The algorithm seeks to analyse the top ten most popular services by locating the
 Finally top10 values are extracted.
 
 **Output:**
+![Screenshot 2023-06-08 9 52 30 PM](https://github.com/lasyaMundrathi/Ethereum-Analysis-and-smart-contracts-using-pyspark/assets/98383338/9beafa99-7613-4b08-bf00-61871811dd54)
+
 
 <div style="width: 50px;">
   
@@ -175,6 +177,8 @@ Finally top10 values are extracted.
 7) The variable topminers, which contains a list of tuples containing the addresses and aggregate size of the top 10 miners, is written to the console.
 
 **Output:**
+![image](https://github.com/lasyaMundrathi/Ethereum-Analysis-and-smart-contracts-using-pyspark/assets/98383338/4b76af0e-bc78-4442-affe-939b4bf3f05b)
+
 <div style="width: 50px;">
   
 | Rank | Address | Value |
