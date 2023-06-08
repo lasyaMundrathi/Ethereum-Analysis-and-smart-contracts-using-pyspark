@@ -26,65 +26,45 @@ base_fee_per_gas: Base fee value
 ### Dataset Schema - transactions
 
 hash: Hash of the block
-
 nonce: Nonce that satisfies the difficulty target
-
 block_hash: Hash of the block where the transaction is in
-
 block_number: Block number where this transaction was in
-
 transaction_index: Transactions index position in the block.
 from_address: Address of the sender
-
 to_address: Address of the receiver. null when it is a contract creation transaction
-
 value: Value transferred in Wei (the smallest denomination of ether)
-
 gas: Gas provided by the sender
-
 gas_price : Gas price provided by the sender in Wei
-
 input: Extra data for Ethereum functions
-
 block_timestamp: Timestamp the associated block was registered at (effectively timestamp of the transaction)
-
 max_fee_per_gas: Sum of base fee and max priority fee
-
 max_priority_fee_per_gas: Tip for mining the transaction
-
 transaction_type: Value used to indicate if the transaction is related to a contract or other specialised transaction
+
 ### Dataset Schema - contracts
+
 address: Address of the contract
-
 bytecode: Code for Ethereum Contract
-
 function_sighashes: Function signature hashes of a contract
-
 is_erc20: Whether this contract is an ERC20 contract
+
 ### Dataset Schema - scams.json
 id: Unique ID for the reported scam
-
 name: Name of the Scam
-
 url: Hosting URL
-
 coin: Currency the scam is attempting to gain
-
 category: Category of scam - Phishing, Ransomware, Trust Trade, etc.
-
 subcategory: Subdivisions of Category
-
 description: Description of the scam provided by the reporter and datasource
-
 addresses: List of known addresses associated with the scam
-
 reporter: User/company who reported the scam first
-
 ip: IP address of the reporter
-
 status: If the scam is currently active, inactive or has been taken offline
+
 ## Part A
+
 #### PartA1:-“Monthly Transaction Volume: Bar Plot Analysis"
+
 **Objective**:- Create a bar plot showing the number of transactions occurring every month between the start and end of the dataset.
 
 **Methodology** 
@@ -177,4 +157,24 @@ Finally top10 values are extracted.
   
 </div>
 
+**Part D Data exploration**
+**Gas Guzzlers:**
+**Objective:** To investigate the relationship between changes in gas price and gas consumed for contract transactions on Ethereum over time and the outcomes seen in Part B. Create a graph depicting the change in gas price over time, as well as a graph depicting the change in gas used for contract transactions over time, and determine whether the most popular contracts use more or less gas than the average.
 
+**Methodology**
+The code in part D Computes the average gas price of Ethereum transactions on a weekly basis. For this Initially, Each transaction line is sent to the mapper function, which extracts the raw date and gas price. The timestamp is then converted into a week string using ‘strftime’ and returns a tuple comprising the week string as the key and the gas price and the value 1 as the value. If an error occurs, a fake key-value pair is returned.
+The transactions variable reads an S3 bucket's transaction data file and filters the lines using the good transaction line function.
+The mapper function is applied to each transaction line to build key-value pairs with the ‘week’ as the key and the gas price and 1 as the value.
+trans_step 2 reduces the data by key, averaging the gas price and calculating the number of transactions every week.
+trans_step3 converts the total gas price to wei, converts to wei, then rounds to the closest integer to map each value in the key-value pairs to the average gas price in wei.
+Step 4 is to sort the key-value pairs by the key, which indicates the week.
+Lastly, the code displays the weekly average gas price.
+
+ **Output:**
+ 
+ The graph below depicts the **average gas price** by month and year (ordered first by month and then by year).
+![image](https://github.com/lasyaMundrathi/Ethereum-Analysis-and-smart-contracts-using-pyspark/assets/98383338/76a6322a-0244-4782-829d-d3a68d124f8f)
+
+
+The graph below depicts the **average gas used** by month and year (ordered first by month and then by year).
+![image](https://github.com/lasyaMundrathi/Ethereum-Analysis-and-smart-contracts-using-pyspark/assets/98383338/643346a4-01c8-44fe-8ce9-2d6ae09e6b32)
