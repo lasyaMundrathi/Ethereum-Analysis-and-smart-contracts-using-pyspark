@@ -173,5 +173,6 @@ Lastly, the code displays the weekly average gas price.
  **Output:**
  
  The graph below depicts the **average gas price** by month and year (ordered first by month and then by year).
+ 
 ![image](https://github.com/lasyaMundrathi/Ethereum-Analysis-and-smart-contracts-using-pyspark/assets/98383338/d44f3d40-c4e5-478b-82d2-135eefec2a6b)
 
