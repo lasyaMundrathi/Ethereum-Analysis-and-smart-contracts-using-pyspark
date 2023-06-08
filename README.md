@@ -146,7 +146,8 @@ The algorithm seeks to analyse the top ten most popular services by locating the
 Finally top10 values are extracted.
 
 **Output:**
-![Screenshot 2023-06-08 9 52 30 PM](https://github.com/lasyaMundrathi/Ethereum-Analysis-and-smart-contracts-using-pyspark/assets/98383338/9beafa99-7613-4b08-bf00-61871811dd54)
+![image](https://github.com/lasyaMundrathi/Ethereum-Analysis-and-smart-contracts-using-pyspark/assets/98383338/6b29851c-c8d7-4dd0-aa97-6f0f541a7575)
+
 
 
 <div style="width: 50px;">
