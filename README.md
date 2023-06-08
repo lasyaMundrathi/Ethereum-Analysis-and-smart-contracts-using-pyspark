@@ -147,8 +147,8 @@ Finally top10 values are extracted.
 
 **Output:**
 
+![image](https://github.com/lasyaMundrathi/Ethereum-Analysis-and-smart-contracts-using-pyspark/assets/98383338/0d7669d5-1547-41e3-a680-d766b1363533)
 
-![Screenshot 2023-06-08 9 55 55 PM](https://github.com/lasyaMundrathi/Ethereum-Analysis-and-smart-contracts-using-pyspark/assets/98383338/b36bd26c-95e2-40f1-b20f-9678c57b843b)
 
 
 <div style="width: 50px;">
