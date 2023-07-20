@@ -130,7 +130,7 @@ Finally top10 values are extracted.
 | 10    | 0x341e790174e3a4d35b65fdc067b6b5634a61caea   |8379000751917755624057500   |
 </div>
 
-**Part C Top Ten Most Active Miners**
+## Part C: Top Ten Most Active Miners
 
 **Objective :** The algorithm seeks to analyse the top ten most popular services  by the size of the blocks mined.
 ## **Methodology**
@@ -161,7 +161,7 @@ Finally top10 values are extracted.
   
 </div>
 
-**Part D Data exploration**
+## Part D Data exploration
 **Gas Guzzlers:**
 **Objective:** To investigate the relationship between changes in gas price and gas consumed for contract transactions on Ethereum over time and the outcomes seen in Part B. Create a graph depicting the change in gas price over time, as well as a graph depicting the change in gas used for contract transactions over time, and determine whether the most popular contracts use more or less gas than the average.
 
