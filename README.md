@@ -76,7 +76,7 @@ status: If the scam is currently active, inactive or has been taken offline
 
 **Output**
 
-![image](https://github.com/lasyaMundrathi/Ethereum-Analysis-and-smart-contracts-using-pyspark/assets/98383338/9ce5df3d-c295-42ac-8395-e2f3fa58980e)
+![image](https://github.com/lasyaMundrathi/Ethereum-transaction-and-smart-contract-analysis/assets/98383338/c48e9712-5a4e-48a3-bf68-640fc2fcee42)
 
 #### Part A2:-"Average Monthly Transaction Value: Bar Plot Analysis"
 **Objective:-Create a bar plot showing the average value of transaction in each month between the start and end of the dataset.**
@@ -92,7 +92,11 @@ status: If the scam is currently active, inactive or has been taken offline
 
 **Output:**
 
-![image](https://github.com/lasyaMundrathi/Ethereum-Analysis-and-smart-contracts-using-pyspark/assets/98383338/5e64a0aa-5210-4cf9-ad58-cc0f8af7e92c)
+![image](https://github.com/lasyaMundrathi/Ethereum-transaction-and-smart-contract-analysis/assets/98383338/a4e6456d-ee94-4b20-9840-6bc992e9f03e)
+
+**Average Number of Transaction in each month between the start and end of the datset**
+
+
 The conclusion from the preceding graph is that the average transaction value was greatest during the early days of the dataset owing to the low number of transactions; nevertheless, as the crypto buzzword expanded over the world, the ethereum transaction counts rapidly climbed during the years, resulting in a dropping average transaction value.
 ## Part B.Top Ten Most Popular Services
 **Objective :-** To assess the top ten smart contracts in terms of total Ether received. This involves connecting the contracts dataset's **address field** to the transactions dataset's **to_address** to calculate how much ether a contract has received.
